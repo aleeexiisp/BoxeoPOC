@@ -200,20 +200,23 @@
   }
 }
 
+/*
+ * `prefers-reduced-motion` solo apaga lo que puede resultar molesto o
+ * desencadenar mareo/fotosensibilidad: el parallax y el scroll suave (ya
+ * gestionados en animations.ts), el parpadeo de las bombillas y el propio
+ * reveal-on-scroll. El resto (marquee, hovers, transiciones de botones y
+ * menú) se deja intacto: apagar la web entera deja el sitio con pinta de
+ * roto para quienes tienen ese ajuste activado en el sistema operativo sin
+ * haberlo elegido conscientemente (frecuente en Windows/VMs).
+ */
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] {
     opacity: 1 !important;
     transform: none !important;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+  .animate-flicker {
+    animation: none !important;
+    opacity: 1 !important;
   }
 }

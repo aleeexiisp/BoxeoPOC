@@ -9,7 +9,7 @@ const items = Array.from({ length: repeat });
 ---
 
 <div class={`overflow-hidden whitespace-nowrap ${className}`} aria-hidden="true">
-  <div class="inline-flex w-max animate-marquee motion-reduce:animate-none">
+  <div class="inline-flex w-max animate-marquee">
     {[0, 1].map(() => (
       <span class="inline-flex shrink-0">
         {items.map(() => (
