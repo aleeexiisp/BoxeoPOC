@@ -22,7 +22,9 @@ const t = getDictionary(locale);
       {/* Timeline */}
       <div class="relative pl-8" data-timeline data-reveal style="--reveal-delay:150ms">
         <span class="absolute left-0 top-0 h-full w-[2px] bg-oxblood/20" aria-hidden="true"></span>
-        <span class="absolute left-0 top-0 h-full w-[2px] origin-top scale-y-0 bg-oxblood" data-timeline-progress aria-hidden="true"></span>
+        {/* Sin scale-y-0 inicial: GSAP fija el estado de partida al iniciarse.
+            Así, con reduced-motion o sin JS, la línea aparece ya dibujada. */}
+        <span class="absolute left-0 top-0 h-full w-[2px] origin-top bg-oxblood" data-timeline-progress aria-hidden="true"></span>
         {
           t.historia.timeline.map((item, i) => (
             <div class="relative pb-8 last:pb-0" data-reveal style={`--reveal-delay:${150 + i * 100}ms`}>

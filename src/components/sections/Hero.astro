@@ -46,8 +46,11 @@ const bulbs = Array.from({ length: 28 });
 
   <Stamp id="hero-stamp" class="absolute bottom-10 right-8 hidden h-28 w-28 text-gold/70 lg:block" />
 
-  <div class="absolute inset-x-0 bottom-6 z-10 flex flex-col items-center gap-2 text-paper/60" aria-hidden="true">
+  <a
+    href="#historia"
+    class="group absolute inset-x-0 bottom-6 z-10 flex flex-col items-center gap-2 text-paper/60 transition-colors hover:text-gold"
+  >
     <span class="font-sub text-[0.65rem] uppercase tracking-[0.3em]">{t.hero.scroll}</span>
-    <span class="h-8 w-px bg-paper/40"></span>
-  </div>
+    <span class="h-8 w-px bg-paper/40 transition-colors group-hover:bg-gold"></span>
+  </a>
 </section>
