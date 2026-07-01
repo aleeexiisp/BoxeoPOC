@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DecoRule from "./DecoRule.astro";
+import { CONTACT } from "../config/wodbuster";
+import type { Locale } from "../i18n/utils";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  pending: string;
+}
+const { locale, title, pending } = Astro.props;
+---
+
+<BaseLayout locale={locale}>
+  <section class="mx-auto max-w-[720px] px-6 py-[clamp(6rem,12vw,9rem)]">
+    <h1 class="font-display text-4xl uppercase text-ink">{title}</h1>
+    <DecoRule color="text-oxblood" class="mt-5 w-24" />
+    <p class="mt-8 font-body text-lg leading-relaxed text-ink/80">{pending}</p>
+    <p class="mt-6 font-body text-sm leading-relaxed text-ink/60">
+      Boxa Gran Price · {CONTACT.address}, {CONTACT.city} · {CONTACT.phones.join(" / ")}
+    </p>
+  </section>
+</BaseLayout>

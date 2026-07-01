@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": "Boxa Gran Price — Boxing Club in Barcelona · History Repeats Itself",
+    "description": "Barcelona's temple of boxing opens its doors again. Directed classes, open training and personal coaching in the heart of the Eixample. Book your trial class."
+  },
+  "nav": {
+    "club": "The Club",
+    "historia": "History",
+    "coaches": "Coaches",
+    "actividades": "Activities",
+    "horario": "Schedule",
+    "tarifas": "Pricing",
+    "contacto": "Contact",
+    "socios": "Members area",
+    "cta": "Join now"
+  },
+  "hero": {
+    "kicker": "Barcelona · Est. 1934",
+    "title1": "History",
+    "title2": "repeats itself",
+    "subtitle": "Barcelona's temple of boxing opens its doors again.",
+    "ctaPrimary": "Join now",
+    "ctaSecondary": "Book a trial class",
+    "scroll": "Scroll"
+  },
+  "historia": {
+    "kicker": "The legend",
+    "title": "The Gran Price, 1934–1973",
+    "paragraphs": [
+      "On the corner of Casanova and Floridablanca stood, between 1935 and 1973, the Gran Price: a theatre with room for more than 4,500 people that became Barcelona's \"temple of boxing\".",
+      "Designed by architect Marino Canosa on the site of the vanished La Bohemia Modernista hall, its ring saw legends such as Luís Romero, Fred Galiana and Mimoun Ben Ali.",
+      "The last fight night was held on 29 September 1972. The building was sold and demolished in 1973. Half a century later, that seed is growing again in the heart of the Eixample."
+    ],
+    "timeline": [
+      { "year": "1934", "text": "The Gran Price opens." },
+      { "year": "1935", "text": "First boxing and wrestling nights." },
+      { "year": "1947–51", "text": "Luís Romero fights at the Price." },
+      { "year": "1972", "text": "Last fight night, 29 September." },
+      { "year": "1973", "text": "The building is sold and demolished." },
+      { "year": "Today", "text": "The Gran Price is reborn as a boxing club." }
+    ],
+    "quote": "\"Barcelona's temple of boxing\""
+  },
+  "club": {
+    "kicker": "The club",
+    "title": "Real boxing, in the heart of Barcelona",
+    "paragraphs": [
+      "Boxing is an interval-based cardio training system: 3 minutes of work, 1 minute of rest. It sharpens reflexes and defensive instinct, and it's a remarkable ally for mental health.",
+      "Our one-hour classes include pad work, technique, heavy bag, jump rope, shadow boxing and circuits, with a contact level each student chooses for themselves.",
+      "The club occupies a listed, historic space in the Eixample, with 5-metre ceilings and exposed stone walls — the perfect stage for history to repeat itself."
+    ],
+    "stats": [
+      { "value": "35", "suffix": "+", "label": "years of experience" },
+      { "value": "9", "suffix": "", "label": "coaches" },
+      { "value": "5", "suffix": "m", "label": "ceiling height" },
+      { "value": "1934", "suffix": "", "label": "the year of the legend" }
+    ]
+  },
+  "actividades": {
+    "kicker": "Activities",
+    "title": "Choose your round",
+    "items": [
+      {
+        "round": "01",
+        "title": "Directed Classes",
+        "description": "Group classes led by our coaches: technique, power and pad work in every session."
+      },
+      {
+        "round": "02",
+        "title": "Open Training",
+        "description": "Free, self-directed training with full access to the gym, bags and equipment, at your own pace."
+      },
+      {
+        "round": "03",
+        "title": "Personal Coaching",
+        "description": "One-to-one sessions with a coach, with a training plan built around you."
+      }
+    ]
+  },
+  "coaches": {
+    "kicker": "The team",
+    "title": "The Gran Price coaches",
+    "subtitle": "Nine trainers, one ring.",
+    "founderBadge": "Founder",
+    "roster": {
+      "jorge-estrella": { "bio": "" },
+      "alvaro": { "bio": "" },
+      "miguel-estrella": { "bio": "Over 35 years of experience in boxing, both as a competitor and as a coach. Founder of Boxa Sant Adrià, Boxa Sant Gervasi and Boxa Gran Price." },
+      "walker": { "bio": "" },
+      "alex-miserol": { "bio": "" },
+      "martin": { "bio": "" },
+      "alex-melvar": { "bio": "" },
+      "lefoumusicon": { "bio": "Catalan Amateur Champion 2000, 2001, 2002 and 2003. Gold medal at the Spanish Amateur Championship 2001/02. Catalan Professional Champion and E.B.U. Official Eliminator Champion 2009." },
+      "valentin": { "bio": "" }
+    }
+  },
+  "horario": {
+    "kicker": "Schedule",
+    "title": "Weekly schedule",
+    "note": "Standard schedule. Check live availability and book your spot in the Members area.",
+    "cta": "See live schedule",
+    "legend": {
+      "dirigit": "Directed Class",
+      "open": "Open Training",
+      "personal": "Personal Coaching",
+      "closed": "Closed"
+    },
+    "days": {
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday",
+      "sun": "Sunday"
+    },
+    "daysShort": {
+      "mon": "Mo",
+      "tue": "Tu",
+      "wed": "We",
+      "thu": "Th",
+      "fri": "Fr",
+      "sat": "Sa",
+      "sun": "Su"
+    }
+  },
+  "tarifas": {
+    "kicker": "Pricing",
+    "title": "Step into the ring",
+    "perMonth": "/mo",
+    "mostPopular": "Most popular",
+    "monthlyTitle": "Monthly plans",
+    "addonsTitle": "Add-ons & services",
+    "discountNote": "Discounts available on 2, 3, 6 and 12-month packages. Check conditions in the Members area.",
+    "cta": "Sign up",
+    "plans": {
+      "openLibre": { "title": "Open Training", "description": "5 sessions per week" },
+      "dirigit3": { "title": "Directed Classes", "description": "3 classes per week" },
+      "dirigit5": { "title": "Directed Classes", "description": "5 classes per week" }
+    },
+    "addons": {
+      "clasePrueba": { "title": "Trial class" },
+      "bono5Dirigidas": { "title": "5-class pack (directed)" },
+      "clasePersonal": { "title": "Personal class" },
+      "alquilerSala": { "title": "Trainers' room rental (1h)" },
+      "masajeDeportivo": { "title": "Sports massage" },
+      "bono5Masajes": { "title": "5-massage pack" },
+      "personalDosUsuarios": { "title": "Personal training (2 people)" },
+      "bono5ClasesPersonales": { "title": "5-class pack (personal)" },
+      "ocho_clasesPersonales": { "title": "8-class pack (personal)" },
+      "seguroAnual": { "title": "Annual sports insurance", "description": "Mandatory" },
+      "matricula": { "title": "Registration fee" }
+    }
+  },
+  "contacto": {
+    "kicker": "Contact",
+    "title": "See you on the canvas",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "cta": "Book your trial class",
+    "followUs": "Follow us"
+  },
+  "footer": {
+    "tagline": "History repeats itself.",
+    "poweredBy": "Bookings managed by",
+    "clubInfo": "Federated club {clubNumber} · Recognised by the Consell Català de l'Esport and the Federació Catalana de Boxa Amateur.",
+    "rights": "All rights reserved.",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy"
+  }
+}

@@ -1,0 +1,106 @@
+---
+import { HOURS, DAY_KEYS, SCHEDULE, type ClassType } from "../config/schedule";
+
+interface Props {
+  days: Record<string, string>;
+  daysShort: Record<string, string>;
+  legend: Record<string, string>;
+}
+const { days, daysShort, legend } = Astro.props;
+
+const typeClasses: Record<Exclude<ClassType, null>, string> = {
+  dirigit: "bg-oxblood text-paper",
+  open: "bg-gold text-ink",
+  personal: "bg-ink text-paper",
+};
+---
+
+<div class="w-full" data-reveal>
+  {/* Desktop: tabla */}
+  <div class="hidden overflow-x-auto md:block">
+    <table class="w-full min-w-[720px] border-collapse text-sm">
+      <thead>
+        <tr>
+          <th class="p-1.5"></th>
+          {
+            DAY_KEYS.map((d) => (
+              <th class="p-1.5 pb-3 text-center font-sub text-xs uppercase tracking-wide text-ink/70">
+                <span class="hidden lg:inline">{days[d]}</span>
+                <span class="lg:hidden">{daysShort[d]}</span>
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          HOURS.map((hour, i) => (
+            <tr>
+              <td class="whitespace-nowrap p-1.5 pr-3 font-sub text-xs text-ink/60">{hour}</td>
+              {DAY_KEYS.map((d) => {
+                const type = SCHEDULE[d][i];
+                return (
+                  <td class="p-1">
+                    {type ? (
+                      <div
+                        class={`flex h-8 items-center justify-center text-[0.6rem] font-sub uppercase tracking-wide ${typeClasses[type]}`}
+                        title={legend[type]}
+                      >
+                        {legend[type].slice(0, 1)}
+                      </div>
+                    ) : (
+                      <div class="h-8 bg-paper/60" />
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  {/* Móvil: acordeón por día */}
+  <div class="space-y-2 md:hidden">
+    {
+      DAY_KEYS.map((d) => (
+        <details class="group border border-ink/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between p-3 font-sub text-sm uppercase tracking-wide text-ink">
+            {days[d]}
+            <span class="transition-transform duration-300 group-open:rotate-180" aria-hidden="true">
+              &#8964;
+            </span>
+          </summary>
+          <div class="space-y-1 p-3 pt-0">
+            {HOURS.map((hour, i) => {
+              const type = SCHEDULE[d][i];
+              return type ? (
+                <div class={`flex items-center justify-between px-3 py-1.5 text-xs ${typeClasses[type]}`}>
+                  <span>{hour}</span>
+                  <span class="font-sub uppercase tracking-wide">{legend[type]}</span>
+                </div>
+              ) : null;
+            })}
+          </div>
+        </details>
+      ))
+    }
+  </div>
+
+  {/* Leyenda */}
+  <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-sub text-xs uppercase tracking-wide text-ink/70">
+    <span class="flex items-center gap-2">
+      <span class="inline-block h-3 w-3 bg-oxblood"></span>
+      {legend.dirigit}
+    </span>
+    <span class="flex items-center gap-2">
+      <span class="inline-block h-3 w-3 bg-gold"></span>
+      {legend.open}
+    </span>
+    <span class="flex items-center gap-2">
+      <span class="inline-block h-3 w-3 bg-ink"></span>
+      {legend.personal}
+    </span>
+  </div>
+</div>

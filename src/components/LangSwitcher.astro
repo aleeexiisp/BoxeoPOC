@@ -1,0 +1,31 @@
+---
+import { LOCALES, localePath, type Locale } from "../i18n/utils";
+
+interface Props {
+  locale: Locale;
+  class?: string;
+}
+const { locale, class: className = "" } = Astro.props;
+const labels: Record<Locale, string> = { es: "ES", ca: "CA", en: "EN" };
+---
+
+<div class={`flex items-center gap-1.5 font-sub text-xs uppercase tracking-[0.1em] ${className}`} role="group" aria-label="Idioma / Idioma / Language">
+  {
+    LOCALES.map((l, i) => (
+      <>
+        <a
+          href={localePath(l, "/")}
+          class={`px-1 py-0.5 transition-colors ${l === locale ? "text-gold" : "text-inherit opacity-70 hover:opacity-100 hover:text-gold"}`}
+          aria-current={l === locale ? "true" : undefined}
+        >
+          {labels[l]}
+        </a>
+        {i < LOCALES.length - 1 && (
+          <span class="opacity-30" aria-hidden="true">
+            /
+          </span>
+        )}
+      </>
+    ))
+  }
+</div>

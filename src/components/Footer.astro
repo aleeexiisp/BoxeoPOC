@@ -1,0 +1,57 @@
+---
+import { getDictionary, localePath, type Locale } from "../i18n/utils";
+import { asset } from "../utils/asset";
+import { SOCIAL, CONTACT } from "../config/wodbuster";
+import DecoRule from "./DecoRule.astro";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const year = new Date().getFullYear();
+const clubInfo = t.footer.clubInfo.replace("{clubNumber}", CONTACT.clubNumber);
+---
+
+<footer class="relative overflow-hidden bg-ink-soft px-6 pb-8 pt-16 text-paper">
+  <div class="grain-overlay"></div>
+  <div class="relative mx-auto max-w-[1200px]">
+    <DecoRule color="text-gold" class="mb-10 w-full" />
+
+    <div class="grid gap-10 md:grid-cols-3">
+      <div>
+        <img src={asset("/img/logo-gran-price.png")} alt="Boxa Gran Price" class="h-12 w-auto" />
+        <p class="mt-4 font-display text-xl uppercase tracking-wide text-gold">{t.footer.tagline}</p>
+      </div>
+
+      <div class="font-body text-sm leading-relaxed text-smoke">
+        <p>{CONTACT.address}</p>
+        <p>{CONTACT.city}</p>
+        <p class="mt-2">
+          {CONTACT.phones.map((p) => (
+            <a href={`tel:${p.replace(/\s/g, "")}`} class="block hover:text-gold">{p}</a>
+          ))}
+        </p>
+      </div>
+
+      <div>
+        <p class="font-sub text-xs uppercase tracking-[0.2em] text-smoke">{t.contacto.followUs}</p>
+        <div class="mt-3 flex gap-4">
+          <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" class="font-sub text-sm uppercase tracking-wide text-paper hover:text-gold">Instagram</a>
+          <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" class="font-sub text-sm uppercase tracking-wide text-paper hover:text-gold">Facebook</a>
+        </div>
+        <p class="mt-6 font-sub text-xs uppercase tracking-[0.2em] text-smoke">{t.footer.poweredBy}</p>
+        <img src="https://cdn.wodbuster.com/wodbuster.png" alt="WodBuster" class="mt-2 h-6 w-auto opacity-80" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-3 border-t border-paper/10 pt-6 font-body text-xs text-smoke md:flex-row md:items-center md:justify-between">
+      <p>{clubInfo}</p>
+      <div class="flex items-center gap-4">
+        <a href={localePath(locale, "/aviso-legal")} class="hover:text-gold">{t.footer.legal}</a>
+        <a href={localePath(locale, "/privacidad")} class="hover:text-gold">{t.footer.privacy}</a>
+      </div>
+    </div>
+    <p class="mt-4 font-body text-xs text-smoke">&copy; {year} Boxa Gran Price. {t.footer.rights}</p>
+  </div>
+</footer>

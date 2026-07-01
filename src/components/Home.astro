@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "./sections/Hero.astro";
+import MarqueeBand from "./sections/MarqueeBand.astro";
+import Historia from "./sections/Historia.astro";
+import Club from "./sections/Club.astro";
+import Actividades from "./sections/Actividades.astro";
+import Coaches from "./sections/Coaches.astro";
+import Horario from "./sections/Horario.astro";
+import Tarifas from "./sections/Tarifas.astro";
+import Contacto from "./sections/Contacto.astro";
+import { getDictionary, type Locale } from "../i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const marqueeText = `BOXA GRAN PRICE · EST. 1934 · ${t.hero.title1.toUpperCase()} ${t.hero.title2.toUpperCase()} ·`;
+---
+
+<BaseLayout locale={locale}>
+  <Hero locale={locale} />
+  <MarqueeBand text={marqueeText} />
+  <Historia locale={locale} />
+  <Club locale={locale} />
+  <Actividades locale={locale} />
+  <Coaches locale={locale} />
+  <Horario locale={locale} />
+  <Tarifas locale={locale} />
+  <Contacto locale={locale} />
+</BaseLayout>

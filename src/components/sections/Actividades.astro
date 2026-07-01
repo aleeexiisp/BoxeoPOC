@@ -1,0 +1,30 @@
+---
+import { getDictionary, type Locale } from "../../i18n/utils";
+import SectionHeader from "../SectionHeader.astro";
+import DecoRule from "../DecoRule.astro";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<section id="actividades" class="relative bg-paper py-[clamp(5rem,10vw,9rem)]">
+  <div class="mx-auto max-w-[1200px] px-6">
+    <SectionHeader kicker={t.actividades.kicker} title={t.actividades.title} align="center" />
+
+    <div class="grid gap-8 md:grid-cols-3">
+      {
+        t.actividades.items.map((item, i) => (
+          <div class="group relative flex flex-col border-2 border-ink/10 bg-ink p-8 text-paper shadow-poster transition-transform duration-300 hover:-translate-y-1" data-reveal style={`--reveal-delay:${i * 120}ms`}>
+            <span class="font-wood text-5xl text-gold/40 transition-colors group-hover:text-gold">{item.round}</span>
+            <h3 class="mt-4 font-sub text-xl uppercase tracking-[0.08em]">{item.title}</h3>
+            <DecoRule color="text-gold/60" class="my-4 w-16" />
+            <p class="font-body text-sm leading-relaxed text-paper/75">{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
