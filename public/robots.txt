@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aleeexiisp.github.io/BoxeoPOC/sitemap-index.xml

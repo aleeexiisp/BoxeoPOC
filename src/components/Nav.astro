@@ -1,0 +1,134 @@
+---
+import { getDictionary, localePath, type Locale } from "../i18n/utils";
+import { asset } from "../utils/asset";
+import LangSwitcher from "./LangSwitcher.astro";
+import Button from "./Button.astro";
+import { WB } from "../config/wodbuster";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+
+const links = [
+  { href: "#club", label: t.nav.club },
+  { href: "#historia", label: t.nav.historia },
+  { href: "#actividades", label: t.nav.actividades },
+  { href: "#coaches", label: t.nav.coaches },
+  { href: "#horario", label: t.nav.horario },
+  { href: "#tarifas", label: t.nav.tarifas },
+  { href: "#contacto", label: t.nav.contacto },
+];
+---
+
+<header id="site-nav" class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-ink/95 backdrop-blur-sm transition-[padding,border-color] duration-300" data-nav>
+  <div class="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 transition-all duration-300" data-nav-inner>
+    <a href={localePath(locale, "/")} class="flex shrink-0 items-center gap-3">
+      <img src={asset("/img/logo-gran-price.png")} alt="Boxa Gran Price" class="h-9 w-auto md:h-10" />
+    </a>
+
+    <nav class="hidden items-center gap-6 lg:flex" aria-label="Principal">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class="font-sub text-xs uppercase tracking-[0.14em] text-paper/85 transition-colors hover:text-gold"
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="hidden items-center gap-4 lg:flex">
+      <LangSwitcher locale={locale} class="text-paper" />
+      <Button href={WB.socios} external variant="ghost" class="!px-4 !py-2 !text-xs">{t.nav.socios}</Button>
+      <Button href={WB.contratarGeneral} external variant="primary" class="!px-5 !py-2.5 !text-xs">{t.nav.cta}</Button>
+    </div>
+
+    <button
+      type="button"
+      class="flex h-10 w-10 items-center justify-center text-paper lg:hidden"
+      data-menu-toggle
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Abrir menú"
+    >
+      <svg data-menu-icon-open width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M3 7h20M3 13h20M3 19h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      <svg data-menu-icon-close width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true" class="hidden">
+        <path d="M5 5l16 16M21 5L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div
+  id="mobile-menu"
+  data-mobile-menu
+  class="fixed inset-0 z-40 flex translate-x-full flex-col justify-center bg-ink px-8 transition-transform duration-500 ease-out lg:hidden"
+  aria-hidden="true"
+>
+  <div class="grain-overlay"></div>
+  <nav class="relative flex flex-col gap-5" aria-label="Menú móvil">
+    {
+      links.map((l) => (
+        <a
+          href={l.href}
+          data-mobile-link
+          class="font-display text-3xl uppercase tracking-wide text-paper transition-colors hover:text-gold"
+        >
+          {l.label}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="relative mt-10 flex flex-col gap-4">
+    <LangSwitcher locale={locale} class="text-paper text-base" />
+    <Button href={WB.socios} external variant="ghost" class="w-full">{t.nav.socios}</Button>
+    <Button href={WB.contratarGeneral} external variant="primary" class="w-full">{t.nav.cta}</Button>
+  </div>
+</div>
+
+<script>
+  const nav = document.querySelector<HTMLElement>("[data-nav]");
+  const navInner = document.querySelector<HTMLElement>("[data-nav-inner]");
+  const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+  const mobileMenu = document.querySelector<HTMLElement>("[data-mobile-menu]");
+  const iconOpen = document.querySelector<SVGElement>("[data-menu-icon-open]");
+  const iconClose = document.querySelector<SVGElement>("[data-menu-icon-close]");
+  const mobileLinks = document.querySelectorAll<HTMLAnchorElement>("[data-mobile-link]");
+
+  const COMPACT_CLASSES = ["h-16"];
+  const REGULAR_CLASSES = ["h-20"];
+
+  function onScroll() {
+    if (!nav || !navInner) return;
+    const scrolled = window.scrollY > 40;
+    nav.classList.toggle("border-gold/20", scrolled);
+    navInner.classList.toggle(COMPACT_CLASSES[0], scrolled);
+    navInner.classList.toggle(REGULAR_CLASSES[0], !scrolled);
+  }
+
+  function setMenuOpen(open: boolean) {
+    if (!mobileMenu || !toggle) return;
+    mobileMenu.classList.toggle("translate-x-full", !open);
+    mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    iconOpen?.classList.toggle("hidden", open);
+    iconClose?.classList.toggle("hidden", !open);
+    document.documentElement.classList.toggle("overflow-hidden", open);
+  }
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    setMenuOpen(!isOpen);
+  });
+
+  mobileLinks.forEach((link) => link.addEventListener("click", () => setMenuOpen(false)));
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+</script>

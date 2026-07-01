@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": "Boxa Gran Price — Club de Boxa a Barcelona · La Història es Repeteix",
+    "description": "El temple del boxa de Barcelona torna a obrir les portes. Boxa Dirigit, Open Lliure i classes personals al bell mig de l'Eixample. Reserva la teva classe de prova."
+  },
+  "nav": {
+    "club": "El Club",
+    "historia": "Història",
+    "coaches": "Coaches",
+    "actividades": "Activitats",
+    "horario": "Horari",
+    "tarifas": "Tarifes",
+    "contacto": "Contacte",
+    "socios": "Zona socis",
+    "cta": "Apunta't"
+  },
+  "hero": {
+    "kicker": "Barcelona · Est. 1934",
+    "title1": "La història",
+    "title2": "es repeteix",
+    "subtitle": "El temple del boxa de Barcelona torna a obrir les portes.",
+    "ctaPrimary": "Apunta't ara",
+    "ctaSecondary": "Reserva classe de prova",
+    "scroll": "Llisca"
+  },
+  "historia": {
+    "kicker": "El mite",
+    "title": "El Gran Price, 1934–1973",
+    "paragraphs": [
+      "A la cantonada de Casanova amb Floridablanca es va alçar, entre 1935 i 1973, el Gran Price: un teatre amb capacitat per a més de 4.500 persones que es va convertir en «el temple del boxa» de Barcelona.",
+      "Dissenyat per l'arquitecte Marino Canosa, sobre el solar de la desapareguda sala La Bohemia Modernista, les seves lones van veure pujar llegendes com Luís Romero, Fred Galiana i Mimoun Ben Ali.",
+      "L'última vetllada es va celebrar el 29 de setembre de 1972. L'edifici es va vendre i enderrocar el 1973. Mig segle després, aquella llavor torna a créixer al cor de l'Eixample."
+    ],
+    "timeline": [
+      { "year": "1934", "text": "Inauguració del Gran Price." },
+      { "year": "1935", "text": "Primeres vetllades de boxa i lluita lliure." },
+      { "year": "1947–51", "text": "Luís Romero puja al ring del Price." },
+      { "year": "1972", "text": "Última vetllada de boxa, 29 de setembre." },
+      { "year": "1973", "text": "Venda i enderroc de l'edifici." },
+      { "year": "Avui", "text": "El Gran Price reneix com a club de boxa." }
+    ],
+    "quote": "«El temple del boxa de Barcelona»"
+  },
+  "club": {
+    "kicker": "El club",
+    "title": "Boxa de veritat, al centre de Barcelona",
+    "paragraphs": [
+      "El boxa és un sistema d'entrenament cardiovascular per intervals: 3 minuts d'exercici, 1 de descans. Millora els reflexos, l'instint defensiu i és un aliat extraordinari per a la salut mental.",
+      "Les nostres classes duren una hora i inclouen treball de manyoples, tècnica, sac pesat, corda, ombra i circuits, amb el nivell de contacte que cada alumne decideix.",
+      "El club ocupa un espai històric i catalogat de l'Eixample, amb sostres de 5 metres i murs de pedra vista: l'escenari perfecte perquè la història es repeteixi."
+    ],
+    "stats": [
+      { "value": "35", "suffix": "+", "label": "anys d'experiència" },
+      { "value": "9", "suffix": "", "label": "coaches" },
+      { "value": "5", "suffix": "m", "label": "de sostre" },
+      { "value": "1934", "suffix": "", "label": "l'any del mite" }
+    ]
+  },
+  "actividades": {
+    "kicker": "Activitats",
+    "title": "Tria el teu assalt",
+    "items": [
+      {
+        "round": "01",
+        "title": "Boxa Dirigit",
+        "description": "Classes en grup dirigides pels nostres coaches: tècnica, potència i treball en parella a cada sessió."
+      },
+      {
+        "round": "02",
+        "title": "Open Lliure",
+        "description": "Entrenament lliure i autònom amb accés complet a sala, sacs i material, al ritme que tu marquis."
+      },
+      {
+        "round": "03",
+        "title": "Classes Personals",
+        "description": "Sessions 1 a 1 amb un coach, amb un pla de treball fet a mida."
+      }
+    ]
+  },
+  "coaches": {
+    "kicker": "L'equip",
+    "title": "Els coaches del Gran Price",
+    "subtitle": "Nou entrenadors, un mateix ring.",
+    "founderBadge": "Fundador",
+    "roster": {
+      "jorge-estrella": { "bio": "" },
+      "alvaro": { "bio": "" },
+      "miguel-estrella": { "bio": "Més de 35 anys d'experiència en boxa, com a competidor i com a entrenador. Fundador de Boxa Sant Adrià, Boxa Sant Gervasi i Boxa Gran Price." },
+      "walker": { "bio": "" },
+      "alex-miserol": { "bio": "" },
+      "martin": { "bio": "" },
+      "alex-melvar": { "bio": "" },
+      "lefoumusicon": { "bio": "Campió de Catalunya Amateur 2000, 2001, 2002 i 2003. Medalla d'or al Campionat d'Espanya Amateur 2001/02. Campió de Catalunya Professional i Campió de l'Eliminatòria Oficial E.B.U. 2009." },
+      "valentin": { "bio": "" }
+    }
+  },
+  "horario": {
+    "kicker": "Horari",
+    "title": "Horari setmanal",
+    "note": "Horari estàndard. Consulta disponibilitat i reserva la teva plaça a la Zona socis.",
+    "cta": "Veure horari en directe",
+    "legend": {
+      "dirigit": "Boxa Dirigit",
+      "open": "Open Lliure",
+      "personal": "Classes Personals",
+      "closed": "Tancat"
+    },
+    "days": {
+      "mon": "Dilluns",
+      "tue": "Dimarts",
+      "wed": "Dimecres",
+      "thu": "Dijous",
+      "fri": "Divendres",
+      "sat": "Dissabte",
+      "sun": "Diumenge"
+    },
+    "daysShort": {
+      "mon": "Dl",
+      "tue": "Dt",
+      "wed": "Dc",
+      "thu": "Dj",
+      "fri": "Dv",
+      "sat": "Ds",
+      "sun": "Dg"
+    }
+  },
+  "tarifas": {
+    "kicker": "Tarifes",
+    "title": "Puja al ring",
+    "perMonth": "/mes",
+    "mostPopular": "Més popular",
+    "monthlyTitle": "Quotes mensuals",
+    "addonsTitle": "Bons i serveis",
+    "discountNote": "Descomptes disponibles en packs de 2, 3, 6 i 12 mesos. Consulta condicions a la Zona socis.",
+    "cta": "Contractar",
+    "plans": {
+      "openLibre": { "title": "Open Lliure", "description": "5 entrenaments per setmana" },
+      "dirigit3": { "title": "Boxa Dirigit", "description": "3 classes dirigides per setmana" },
+      "dirigit5": { "title": "Boxa Dirigit", "description": "5 classes dirigides per setmana" }
+    },
+    "addons": {
+      "clasePrueba": { "title": "Classe de prova" },
+      "bono5Dirigidas": { "title": "Bo 5 classes dirigides" },
+      "clasePersonal": { "title": "Classe personal" },
+      "alquilerSala": { "title": "Lloguer sala entrenadors (1h)" },
+      "masajeDeportivo": { "title": "Massatge esportiu" },
+      "bono5Masajes": { "title": "Bo 5 massatges" },
+      "personalDosUsuarios": { "title": "Personal training (2 persones)" },
+      "bono5ClasesPersonales": { "title": "Bo 5 classes personals" },
+      "ocho_clasesPersonales": { "title": "Bo 8 classes personals" },
+      "seguroAnual": { "title": "Assegurança esportiva anual", "description": "Obligatòria" },
+      "matricula": { "title": "Matrícula" }
+    }
+  },
+  "contacto": {
+    "kicker": "Contacte",
+    "title": "T'esperem sobre la lona",
+    "addressLabel": "Adreça",
+    "phoneLabel": "Telèfon",
+    "cta": "Reserva la teva classe de prova",
+    "followUs": "Segueix-nos"
+  },
+  "footer": {
+    "tagline": "La història es repeteix.",
+    "poweredBy": "Reserves gestionades per",
+    "clubInfo": "Club federat {clubNumber} · Reconegut pel Consell Català de l'Esport i la Federació Catalana de Boxa Amateur.",
+    "rights": "Tots els drets reservats.",
+    "legal": "Avís legal",
+    "privacy": "Política de privadesa"
+  }
+}

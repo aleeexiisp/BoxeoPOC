@@ -1,0 +1,24 @@
+---
+interface Props {
+  text: string;
+  repeat?: number;
+  class?: string;
+}
+const { text, repeat = 6, class: className = "" } = Astro.props;
+const items = Array.from({ length: repeat });
+---
+
+<div class={`overflow-hidden whitespace-nowrap ${className}`} aria-hidden="true">
+  <div class="inline-flex w-max animate-marquee motion-reduce:animate-none">
+    {[0, 1].map(() => (
+      <span class="inline-flex shrink-0">
+        {items.map(() => (
+          <span class="flex items-center px-4 font-sub uppercase tracking-[0.3em] text-sm">
+            {text}
+            <span class="ml-4 text-gold">&#9670;</span>
+          </span>
+        ))}
+      </span>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,26 @@
+---
+import { getDictionary, type Locale } from "../../i18n/utils";
+import SectionHeader from "../SectionHeader.astro";
+import ScheduleTable from "../ScheduleTable.astro";
+import Button from "../Button.astro";
+import { WB } from "../../config/wodbuster";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<section id="horario" class="relative bg-paper-deep py-[clamp(5rem,10vw,9rem)]">
+  <div class="mx-auto max-w-[1200px] px-6">
+    <SectionHeader kicker={t.horario.kicker} title={t.horario.title} />
+    <p class="-mt-8 mb-10 max-w-xl font-body text-ink/70" data-reveal>{t.horario.note}</p>
+
+    <ScheduleTable days={t.horario.days} daysShort={t.horario.daysShort} legend={t.horario.legend} />
+
+    <div class="mt-10" data-reveal>
+      <Button href={WB.socios} external variant="primary">{t.horario.cta}</Button>
+    </div>
+  </div>
+</section>

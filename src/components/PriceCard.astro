@@ -1,0 +1,73 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  price: number;
+  suffix?: string;
+  href: string;
+  ctaLabel: string;
+  highlight?: boolean;
+  highlightLabel?: string;
+  compact?: boolean;
+}
+const {
+  title,
+  description,
+  price,
+  suffix,
+  href,
+  ctaLabel,
+  highlight = false,
+  highlightLabel,
+  compact = false,
+} = Astro.props;
+---
+
+{
+  compact ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group flex items-center justify-between gap-4 border-b border-paper/15 py-4 transition-colors hover:border-gold"
+      data-reveal
+    >
+      <span>
+        <span class="block font-sub text-sm uppercase tracking-[0.05em] text-paper md:text-base">{title}</span>
+        {description && <span class="block font-body text-xs text-paper/55">{description}</span>}
+      </span>
+      <span class="flex shrink-0 items-center gap-3">
+        <span class="font-wood text-xl text-gold">{price}&euro;</span>
+        <span class="font-sub text-xs uppercase tracking-[0.1em] text-paper/40 transition-colors group-hover:text-gold">
+          {ctaLabel} &rarr;
+        </span>
+      </span>
+    </a>
+  ) : (
+    <div
+      class={`relative flex flex-col p-8 border-2 shadow-poster ${highlight ? "border-gold bg-ink-soft" : "border-smoke/30 bg-ink"} text-paper`}
+      data-reveal
+    >
+      {highlight && highlightLabel && (
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gold px-3 py-1 font-sub text-xs font-semibold uppercase tracking-[0.15em] text-ink">
+          {highlightLabel}
+        </span>
+      )}
+      <h3 class="font-sub text-lg uppercase tracking-[0.08em]">{title}</h3>
+      {description && <p class="mt-1 font-body text-sm text-smoke">{description}</p>}
+      <p class="mt-6 font-wood leading-none text-gold text-[clamp(2.5rem,5vw,4rem)]">
+        {price}
+        <span class="align-top text-2xl">&euro;</span>
+        {suffix && <span class="ml-1 font-sub text-base text-smoke">{suffix}</span>}
+      </p>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-8 inline-flex items-center justify-center bg-oxblood px-6 py-3 font-sub text-sm uppercase tracking-[0.1em] text-paper transition-colors hover:bg-oxblood-bright"
+      >
+        {ctaLabel}
+      </a>
+    </div>
+  )
+}

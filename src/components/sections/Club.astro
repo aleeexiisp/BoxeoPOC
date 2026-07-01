@@ -1,0 +1,36 @@
+---
+import { getDictionary, type Locale } from "../../i18n/utils";
+import SectionHeader from "../SectionHeader.astro";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<section id="club" class="relative overflow-hidden bg-ink py-[clamp(5rem,10vw,9rem)] text-paper">
+  <div class="grain-overlay"></div>
+  <div class="relative mx-auto max-w-[1200px] px-6">
+    <SectionHeader kicker={t.club.kicker} title={t.club.title} dark />
+
+    <div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <div class="space-y-5" data-reveal>
+        {t.club.paragraphs.map((p) => <p class="font-body text-lg leading-relaxed text-paper/85">{p}</p>)}
+      </div>
+
+      <div class="grid grid-cols-2 gap-6" data-reveal style="--reveal-delay:150ms">
+        {
+          t.club.stats.map((stat) => (
+            <div class="border border-gold/30 p-6 text-center">
+              <p class="font-wood text-[clamp(2rem,4vw,3rem)] leading-none text-gold">
+                <span data-counter data-counter-target={stat.value}>0</span><span class="text-xl">{stat.suffix}</span>
+              </p>
+              <p class="mt-2 font-sub text-xs uppercase tracking-[0.14em] text-paper/70">{stat.label}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

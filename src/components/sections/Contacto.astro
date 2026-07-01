@@ -1,0 +1,59 @@
+---
+import { getDictionary, type Locale } from "../../i18n/utils";
+import SectionHeader from "../SectionHeader.astro";
+import Button from "../Button.astro";
+import { WB, CONTACT, SOCIAL } from "../../config/wodbuster";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const mapQuery = encodeURIComponent(`${CONTACT.address}, ${CONTACT.city}`);
+---
+
+<section id="contacto" class="relative bg-paper py-[clamp(5rem,10vw,9rem)]">
+  <div class="mx-auto max-w-[1200px] px-6">
+    <SectionHeader kicker={t.contacto.kicker} title={t.contacto.title} />
+
+    <div class="grid gap-12 lg:grid-cols-2">
+      <div class="space-y-6" data-reveal>
+        <div>
+          <p class="font-sub text-xs uppercase tracking-[0.2em] text-oxblood">{t.contacto.addressLabel}</p>
+          <p class="mt-2 font-body text-lg text-ink/85">{CONTACT.address}</p>
+          <p class="font-body text-lg text-ink/85">{CONTACT.city}</p>
+        </div>
+        <div>
+          <p class="font-sub text-xs uppercase tracking-[0.2em] text-oxblood">{t.contacto.phoneLabel}</p>
+          {
+            CONTACT.phones.map((p) => (
+              <a href={`tel:${p.replace(/\s/g, "")}`} class="mt-2 block font-body text-lg text-ink/85 hover:text-oxblood">
+                {p}
+              </a>
+            ))
+          }
+        </div>
+        <div>
+          <p class="font-sub text-xs uppercase tracking-[0.2em] text-oxblood">{t.contacto.followUs}</p>
+          <div class="mt-2 flex gap-4">
+            <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" class="font-body text-lg text-ink/85 hover:text-oxblood">Instagram</a>
+            <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" class="font-body text-lg text-ink/85 hover:text-oxblood">Facebook</a>
+          </div>
+        </div>
+        <div class="pt-4">
+          <Button href={WB.claseDePrueba} external variant="primary">{t.contacto.cta}</Button>
+        </div>
+      </div>
+
+      <div class="relative min-h-[320px] overflow-hidden border-2 border-ink/10 shadow-poster" data-reveal style="--reveal-delay:150ms">
+        <iframe
+          title="Mapa — Boxa Gran Price"
+          src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+          class="absolute inset-0 h-full w-full grayscale-[40%] contrast-125"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>

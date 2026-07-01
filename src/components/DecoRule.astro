@@ -1,0 +1,9 @@
+---
+interface Props {
+  color?: string;
+  class?: string;
+}
+const { color = "text-gold", class: className = "" } = Astro.props;
+---
+
+<div class={`deco-rule ${color} ${className}`} aria-hidden="true"></div>

@@ -1,0 +1,12 @@
+---
+import Marquee from "../Marquee.astro";
+
+interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+
+<div class="relative overflow-hidden border-y-2 border-gold/40 bg-ink py-3 text-gold">
+  <Marquee text={text} />
+</div>

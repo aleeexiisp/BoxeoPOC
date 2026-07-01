@@ -1,0 +1,63 @@
+---
+import { getDictionary, type Locale } from "../../i18n/utils";
+import SectionHeader from "../SectionHeader.astro";
+import PriceCard from "../PriceCard.astro";
+import { MONTHLY_PLANS, ADDON_PLANS } from "../../config/pricing";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<section id="tarifas" class="relative overflow-hidden bg-ink py-[clamp(5rem,10vw,9rem)]">
+  <div class="grain-overlay"></div>
+  <div class="relative mx-auto max-w-[1200px] px-6">
+    <SectionHeader kicker={t.tarifas.kicker} title={t.tarifas.title} align="center" dark />
+
+    <h3 class="mb-6 text-center font-sub text-xs uppercase tracking-[0.2em] text-gold/80" data-reveal>{t.tarifas.monthlyTitle}</h3>
+    <div class="grid gap-8 pt-3 md:grid-cols-3">
+      {
+        MONTHLY_PLANS.map((plan, i) => {
+          const copy = t.tarifas.plans[plan.id as keyof typeof t.tarifas.plans];
+          return (
+            <div style={`--reveal-delay:${i * 120}ms`}>
+              <PriceCard
+                title={copy.title}
+                description={copy.description}
+                price={plan.price}
+                suffix={t.tarifas.perMonth}
+                href={plan.href}
+                ctaLabel={t.tarifas.cta}
+                highlight={plan.highlight}
+                highlightLabel={t.tarifas.mostPopular}
+              />
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <h3 class="mb-4 mt-16 text-center font-sub text-xs uppercase tracking-[0.2em] text-gold/80" data-reveal>{t.tarifas.addonsTitle}</h3>
+    <div class="mx-auto grid max-w-3xl gap-x-10 sm:grid-cols-2" data-reveal>
+      {
+        ADDON_PLANS.map((plan) => {
+          const copy = t.tarifas.addons[plan.id as keyof typeof t.tarifas.addons];
+          return (
+            <PriceCard
+              compact
+              title={copy.title}
+              description={"description" in copy ? copy.description : undefined}
+              price={plan.price}
+              href={plan.href}
+              ctaLabel={t.tarifas.cta}
+            />
+          );
+        })
+      }
+    </div>
+
+    <p class="mt-10 text-center font-body text-sm text-paper/60" data-reveal>{t.tarifas.discountNote}</p>
+  </div>
+</section>

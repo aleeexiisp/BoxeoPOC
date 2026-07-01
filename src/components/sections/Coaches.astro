@@ -1,0 +1,36 @@
+---
+import { getDictionary, type Locale } from "../../i18n/utils";
+import SectionHeader from "../SectionHeader.astro";
+import CoachCard from "../CoachCard.astro";
+import { COACHES } from "../../config/coaches";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+---
+
+<section id="coaches" class="relative overflow-hidden bg-ink py-[clamp(5rem,10vw,9rem)]">
+  <div class="grain-overlay"></div>
+  <div class="relative mx-auto max-w-[1200px] px-6">
+    <SectionHeader kicker={t.coaches.kicker} title={t.coaches.title} dark />
+    <p class="-mt-8 mb-12 font-body text-paper/70" data-reveal>{t.coaches.subtitle}</p>
+
+    <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+      {
+        COACHES.map((coach, i) => (
+          <div style={`--reveal-delay:${(i % 4) * 100}ms`}>
+            <CoachCard
+              name={coach.name}
+              photo={coach.photo}
+              bio={t.coaches.roster[coach.id as keyof typeof t.coaches.roster]?.bio || undefined}
+              founder={coach.founder}
+              founderLabel={t.coaches.founderBadge}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

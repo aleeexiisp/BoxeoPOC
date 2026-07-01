@@ -1,0 +1,53 @@
+---
+import { getDictionary, type Locale } from "../../i18n/utils";
+import Button from "../Button.astro";
+import Stamp from "../Stamp.astro";
+import { WB } from "../../config/wodbuster";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getDictionary(locale);
+const bulbs = Array.from({ length: 28 });
+---
+
+<section id="inicio" class="relative flex min-h-[100svh] items-center overflow-hidden bg-ink text-paper">
+  {/* Marquesina de bombillas */}
+  <div class="absolute inset-x-0 top-0 z-10 flex justify-between px-3 pt-3 md:px-6 md:pt-4" aria-hidden="true">
+    {
+      bulbs.map((_, i) => (
+        <span class="h-1.5 w-1.5 rounded-full bg-gold-bright animate-flicker" style={`animation-delay:${(i * 137) % 3200}ms`} />
+      ))
+    }
+  </div>
+
+  {/* Fondo: resplandor de foco de ring + grano de papel */}
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true" data-parallax-bg>
+    <div class="absolute left-1/2 top-[28%] h-[60vh] w-[60vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-oxblood/25 blur-[120px]"></div>
+    <div class="absolute bottom-[-15%] right-[-10%] h-[50vh] w-[50vh] rounded-full bg-gold/10 blur-[100px]"></div>
+  </div>
+  <div class="grain-overlay"></div>
+
+  <div class="relative z-10 mx-auto w-full max-w-[1200px] px-6 pt-14">
+    <p class="kicker text-gold" data-reveal>{t.hero.kicker}</p>
+    <h1 class="mt-4 font-display uppercase leading-[0.88] text-[clamp(3.25rem,9vw,8rem)]">
+      <span class="block" data-reveal>{t.hero.title1}</span>
+      <span class="block text-gold" data-reveal style="--reveal-delay:150ms">{t.hero.title2}</span>
+    </h1>
+    <p class="mt-6 max-w-xl font-body text-lg text-paper/85 md:text-xl" data-reveal style="--reveal-delay:300ms">
+      {t.hero.subtitle}
+    </p>
+    <div class="mt-10 flex flex-wrap gap-4" data-reveal style="--reveal-delay:450ms">
+      <Button href={WB.contratarGeneral} external variant="primary">{t.hero.ctaPrimary}</Button>
+      <Button href={WB.claseDePrueba} external variant="ghost">{t.hero.ctaSecondary}</Button>
+    </div>
+  </div>
+
+  <Stamp id="hero-stamp" class="absolute bottom-10 right-8 hidden h-28 w-28 text-gold/70 lg:block" />
+
+  <div class="absolute inset-x-0 bottom-6 z-10 flex flex-col items-center gap-2 text-paper/60" aria-hidden="true">
+    <span class="font-sub text-[0.65rem] uppercase tracking-[0.3em]">{t.hero.scroll}</span>
+    <span class="h-8 w-px bg-paper/40"></span>
+  </div>
+</section>
