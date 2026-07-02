@@ -32,12 +32,30 @@
       "La última velada se celebró el 29 de septiembre de 1972. El edificio fue vendido y demolido en 1973. Medio siglo después, esa semilla vuelve a crecer en el corazón del Eixample."
     ],
     "timeline": [
-      { "year": "1934", "text": "Inauguración del Gran Price." },
-      { "year": "1935", "text": "Primeras veladas de boxeo y lucha libre." },
-      { "year": "1947–51", "text": "Luís Romero sube al ring del Price." },
-      { "year": "1972", "text": "Última velada de boxeo, 29 de septiembre." },
-      { "year": "1973", "text": "Venta y demolición del edificio." },
-      { "year": "Hoy", "text": "El Gran Price renace como club de boxeo." }
+      {
+        "year": "1934",
+        "text": "Inauguración del Gran Price."
+      },
+      {
+        "year": "1935",
+        "text": "Primeras veladas de boxeo y lucha libre."
+      },
+      {
+        "year": "1947–51",
+        "text": "Luís Romero sube al ring del Price."
+      },
+      {
+        "year": "1972",
+        "text": "Última velada de boxeo, 29 de septiembre."
+      },
+      {
+        "year": "1973",
+        "text": "Venta y demolición del edificio."
+      },
+      {
+        "year": "Hoy",
+        "text": "El Gran Price renace como club de boxeo."
+      }
     ],
     "quote": "«El templo del boxeo de Barcelona»"
   },
@@ -50,10 +68,26 @@
       "El club ocupa un espacio histórico y catalogado del Eixample, con techos de 5 metros y muros de piedra vista: el escenario perfecto para que la historia se repita."
     ],
     "stats": [
-      { "value": "35", "suffix": "+", "label": "años de experiencia" },
-      { "value": "9", "suffix": "", "label": "coaches" },
-      { "value": "5", "suffix": "m", "label": "de techo" },
-      { "value": "1934", "suffix": "", "label": "el año del mito" }
+      {
+        "value": "35",
+        "suffix": "+",
+        "label": "años de experiencia"
+      },
+      {
+        "value": "9",
+        "suffix": "",
+        "label": "coaches"
+      },
+      {
+        "value": "5",
+        "suffix": "m",
+        "label": "de techo"
+      },
+      {
+        "value": "1934",
+        "suffix": "",
+        "label": "el año del mito"
+      }
     ]
   },
   "actividades": {
@@ -83,15 +117,33 @@
     "subtitle": "Nueve entrenadores, un mismo ring.",
     "founderBadge": "Fundador",
     "roster": {
-      "jorge-estrella": { "bio": "" },
-      "alvaro": { "bio": "" },
-      "miguel-estrella": { "bio": "Más de 35 años de experiencia en boxeo, como competidor y como entrenador. Fundador de Boxa Sant Adrià, Boxa Sant Gervasi y Boxa Gran Price." },
-      "walker": { "bio": "" },
-      "alex-miserol": { "bio": "" },
-      "martin": { "bio": "" },
-      "alex-melvar": { "bio": "" },
-      "lefoumusicon": { "bio": "Campeón de Cataluña Amateur 2000, 2001, 2002 y 2003. Medalla de oro en el Campeonato de España Amateur 2001/02. Campeón de Cataluña Profesional y Campeón de la Eliminatoria Oficial E.B.U. 2009." },
-      "valentin": { "bio": "" }
+      "jorge-estrella": {
+        "bio": ""
+      },
+      "alvaro": {
+        "bio": ""
+      },
+      "miguel-estrella": {
+        "bio": "Más de 35 años de experiencia en boxeo, como competidor y como entrenador. Fundador de Boxa Sant Adrià, Boxa Sant Gervasi y Boxa Gran Price."
+      },
+      "walker": {
+        "bio": ""
+      },
+      "alex-miserol": {
+        "bio": ""
+      },
+      "martin": {
+        "bio": ""
+      },
+      "alex-melvar": {
+        "bio": ""
+      },
+      "lefoumusicon": {
+        "bio": "Campeón de Cataluña Amateur 2000, 2001, 2002 y 2003. Medalla de oro en el Campeonato de España Amateur 2001/02. Campeón de Cataluña Profesional y Campeón de la Eliminatoria Oficial E.B.U. 2009."
+      },
+      "valentin": {
+        "bio": ""
+      }
     }
   },
   "horario": {
@@ -134,22 +186,54 @@
     "discountNote": "Descuentos disponibles en packs de 2, 3, 6 y 12 meses. Consulta condiciones en la Zona socios.",
     "cta": "Contratar",
     "plans": {
-      "openLibre": { "title": "Open Libre", "description": "5 entrenos por semana" },
-      "dirigit3": { "title": "Boxa Dirigit", "description": "3 clases dirigidas por semana" },
-      "dirigit5": { "title": "Boxa Dirigit", "description": "5 clases dirigidas por semana" }
+      "openLibre": {
+        "title": "Open Libre",
+        "description": "5 entrenos por semana"
+      },
+      "dirigit3": {
+        "title": "Boxa Dirigit",
+        "description": "3 clases dirigidas por semana"
+      },
+      "dirigit5": {
+        "title": "Boxa Dirigit",
+        "description": "5 clases dirigidas por semana"
+      }
     },
     "addons": {
-      "clasePrueba": { "title": "Clase de prueba" },
-      "bono5Dirigidas": { "title": "Bono 5 clases dirigidas" },
-      "clasePersonal": { "title": "Clase personal" },
-      "alquilerSala": { "title": "Alquiler sala entrenadores (1h)" },
-      "masajeDeportivo": { "title": "Masaje deportivo" },
-      "bono5Masajes": { "title": "Bono 5 masajes" },
-      "personalDosUsuarios": { "title": "Personal training (2 personas)" },
-      "bono5ClasesPersonales": { "title": "Bono 5 clases personales" },
-      "ocho_clasesPersonales": { "title": "Bono 8 clases personales" },
-      "seguroAnual": { "title": "Seguro deportivo anual", "description": "Obligatorio" },
-      "matricula": { "title": "Matrícula" }
+      "clasePrueba": {
+        "title": "Clase de prueba"
+      },
+      "bono5Dirigidas": {
+        "title": "Bono 5 clases dirigidas"
+      },
+      "clasePersonal": {
+        "title": "Clase personal"
+      },
+      "alquilerSala": {
+        "title": "Alquiler sala entrenadores (1h)"
+      },
+      "masajeDeportivo": {
+        "title": "Masaje deportivo"
+      },
+      "bono5Masajes": {
+        "title": "Bono 5 masajes"
+      },
+      "personalDosUsuarios": {
+        "title": "Personal training (2 personas)"
+      },
+      "bono5ClasesPersonales": {
+        "title": "Bono 5 clases personales"
+      },
+      "ocho_clasesPersonales": {
+        "title": "Bono 8 clases personales"
+      },
+      "seguroAnual": {
+        "title": "Seguro deportivo anual",
+        "description": "Obligatorio"
+      },
+      "matricula": {
+        "title": "Matrícula"
+      }
     }
   },
   "contacto": {
@@ -167,5 +251,9 @@
     "rights": "Todos los derechos reservados.",
     "legal": "Aviso legal",
     "privacy": "Política de privacidad"
+  },
+  "galeria": {
+    "kicker": "Galería",
+    "title": "Así es hoy"
   }
 }

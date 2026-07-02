@@ -32,12 +32,30 @@
       "The last fight night was held on 29 September 1972. The building was sold and demolished in 1973. Half a century later, that seed is growing again in the heart of the Eixample."
     ],
     "timeline": [
-      { "year": "1934", "text": "The Gran Price opens." },
-      { "year": "1935", "text": "First boxing and wrestling nights." },
-      { "year": "1947–51", "text": "Luís Romero fights at the Price." },
-      { "year": "1972", "text": "Last fight night, 29 September." },
-      { "year": "1973", "text": "The building is sold and demolished." },
-      { "year": "Today", "text": "The Gran Price is reborn as a boxing club." }
+      {
+        "year": "1934",
+        "text": "The Gran Price opens."
+      },
+      {
+        "year": "1935",
+        "text": "First boxing and wrestling nights."
+      },
+      {
+        "year": "1947–51",
+        "text": "Luís Romero fights at the Price."
+      },
+      {
+        "year": "1972",
+        "text": "Last fight night, 29 September."
+      },
+      {
+        "year": "1973",
+        "text": "The building is sold and demolished."
+      },
+      {
+        "year": "Today",
+        "text": "The Gran Price is reborn as a boxing club."
+      }
     ],
     "quote": "\"Barcelona's temple of boxing\""
   },
@@ -50,10 +68,26 @@
       "The club occupies a listed, historic space in the Eixample, with 5-metre ceilings and exposed stone walls — the perfect stage for history to repeat itself."
     ],
     "stats": [
-      { "value": "35", "suffix": "+", "label": "years of experience" },
-      { "value": "9", "suffix": "", "label": "coaches" },
-      { "value": "5", "suffix": "m", "label": "ceiling height" },
-      { "value": "1934", "suffix": "", "label": "the year of the legend" }
+      {
+        "value": "35",
+        "suffix": "+",
+        "label": "years of experience"
+      },
+      {
+        "value": "9",
+        "suffix": "",
+        "label": "coaches"
+      },
+      {
+        "value": "5",
+        "suffix": "m",
+        "label": "ceiling height"
+      },
+      {
+        "value": "1934",
+        "suffix": "",
+        "label": "the year of the legend"
+      }
     ]
   },
   "actividades": {
@@ -83,15 +117,33 @@
     "subtitle": "Nine trainers, one ring.",
     "founderBadge": "Founder",
     "roster": {
-      "jorge-estrella": { "bio": "" },
-      "alvaro": { "bio": "" },
-      "miguel-estrella": { "bio": "Over 35 years of experience in boxing, both as a competitor and as a coach. Founder of Boxa Sant Adrià, Boxa Sant Gervasi and Boxa Gran Price." },
-      "walker": { "bio": "" },
-      "alex-miserol": { "bio": "" },
-      "martin": { "bio": "" },
-      "alex-melvar": { "bio": "" },
-      "lefoumusicon": { "bio": "Catalan Amateur Champion 2000, 2001, 2002 and 2003. Gold medal at the Spanish Amateur Championship 2001/02. Catalan Professional Champion and E.B.U. Official Eliminator Champion 2009." },
-      "valentin": { "bio": "" }
+      "jorge-estrella": {
+        "bio": ""
+      },
+      "alvaro": {
+        "bio": ""
+      },
+      "miguel-estrella": {
+        "bio": "Over 35 years of experience in boxing, both as a competitor and as a coach. Founder of Boxa Sant Adrià, Boxa Sant Gervasi and Boxa Gran Price."
+      },
+      "walker": {
+        "bio": ""
+      },
+      "alex-miserol": {
+        "bio": ""
+      },
+      "martin": {
+        "bio": ""
+      },
+      "alex-melvar": {
+        "bio": ""
+      },
+      "lefoumusicon": {
+        "bio": "Catalan Amateur Champion 2000, 2001, 2002 and 2003. Gold medal at the Spanish Amateur Championship 2001/02. Catalan Professional Champion and E.B.U. Official Eliminator Champion 2009."
+      },
+      "valentin": {
+        "bio": ""
+      }
     }
   },
   "horario": {
@@ -134,22 +186,54 @@
     "discountNote": "Discounts available on 2, 3, 6 and 12-month packages. Check conditions in the Members area.",
     "cta": "Sign up",
     "plans": {
-      "openLibre": { "title": "Open Training", "description": "5 sessions per week" },
-      "dirigit3": { "title": "Directed Classes", "description": "3 classes per week" },
-      "dirigit5": { "title": "Directed Classes", "description": "5 classes per week" }
+      "openLibre": {
+        "title": "Open Training",
+        "description": "5 sessions per week"
+      },
+      "dirigit3": {
+        "title": "Directed Classes",
+        "description": "3 classes per week"
+      },
+      "dirigit5": {
+        "title": "Directed Classes",
+        "description": "5 classes per week"
+      }
     },
     "addons": {
-      "clasePrueba": { "title": "Trial class" },
-      "bono5Dirigidas": { "title": "5-class pack (directed)" },
-      "clasePersonal": { "title": "Personal class" },
-      "alquilerSala": { "title": "Trainers' room rental (1h)" },
-      "masajeDeportivo": { "title": "Sports massage" },
-      "bono5Masajes": { "title": "5-massage pack" },
-      "personalDosUsuarios": { "title": "Personal training (2 people)" },
-      "bono5ClasesPersonales": { "title": "5-class pack (personal)" },
-      "ocho_clasesPersonales": { "title": "8-class pack (personal)" },
-      "seguroAnual": { "title": "Annual sports insurance", "description": "Mandatory" },
-      "matricula": { "title": "Registration fee" }
+      "clasePrueba": {
+        "title": "Trial class"
+      },
+      "bono5Dirigidas": {
+        "title": "5-class pack (directed)"
+      },
+      "clasePersonal": {
+        "title": "Personal class"
+      },
+      "alquilerSala": {
+        "title": "Trainers' room rental (1h)"
+      },
+      "masajeDeportivo": {
+        "title": "Sports massage"
+      },
+      "bono5Masajes": {
+        "title": "5-massage pack"
+      },
+      "personalDosUsuarios": {
+        "title": "Personal training (2 people)"
+      },
+      "bono5ClasesPersonales": {
+        "title": "5-class pack (personal)"
+      },
+      "ocho_clasesPersonales": {
+        "title": "8-class pack (personal)"
+      },
+      "seguroAnual": {
+        "title": "Annual sports insurance",
+        "description": "Mandatory"
+      },
+      "matricula": {
+        "title": "Registration fee"
+      }
     }
   },
   "contacto": {
@@ -167,5 +251,9 @@
     "rights": "All rights reserved.",
     "legal": "Legal notice",
     "privacy": "Privacy policy"
+  },
+  "galeria": {
+    "kicker": "Gallery",
+    "title": "This is today"
   }
 }
