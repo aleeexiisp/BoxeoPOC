@@ -61,8 +61,14 @@ const ogImage = new URL(asset("/img/logo-gran-price.png"), Astro.site ?? "https:
     })} />
   </head>
   <body class="bg-paper font-body text-ink">
-    <div id="curtain" class="fixed inset-0 z-[999] flex items-center justify-center bg-ink" aria-hidden="true">
-      <img data-curtain-logo src={asset("/img/logo-gran-price.png")} alt="" class="h-14 w-auto opacity-0 md:h-16" />
+    <div id="curtain" class="fixed inset-0 z-[999] overflow-hidden bg-ink" aria-hidden="true">
+      <img
+        data-curtain-logo
+        src={asset("/img/logo-gran-price.png")}
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover grayscale contrast-125 opacity-0"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30"></div>
     </div>
 
     <Nav locale={locale} />
